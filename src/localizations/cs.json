@@ -1,0 +1,9 @@
+{
+  "app.containers.HomePage.jobTitle": "Software architect",
+  "app.containers.HomePage.selectTheme": "vyber tema",
+  "app.containers.HomePage.light": "svetle",
+  "app.containers.HomePage.dark": "tmave",
+  "app.containers.HomePage.selectLanguage": "vyber jazyk",
+  "app.containers.HomePage.cs": "cesky",
+  "app.containers.HomePage.en": "anglicky"
+}

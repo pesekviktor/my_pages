@@ -1,0 +1,9 @@
+{
+  "app.containers.HomePage.jobTitle": "Software architect",
+  "app.containers.HomePage.selectTheme": "Select theme",
+  "app.containers.HomePage.light": "Light",
+  "app.containers.HomePage.dark": "Dark",
+  "app.containers.HomePage.selectLanguage": "Select language",
+  "app.containers.HomePage.cs": "Czech",
+  "app.containers.HomePage.en": "English"
+}
