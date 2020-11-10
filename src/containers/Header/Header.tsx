@@ -8,12 +8,12 @@ const HeaderLayout = styled.div`
   height: 52px;
   width: 100%;
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 `;
 
 const Logo = styled.img`
-    max-height: 100%;
-    margin-right: 15px;
+  max-height: 100%;
+  margin-right: 15px;
 `;
 
 const LogoLink = styled(Link)`
@@ -28,11 +28,10 @@ const LogoLink = styled(Link)`
 export const Header = () => {
   return (
     <HeaderLayout>
-      <LogoLink to={'/'}>
+      <LogoLink to={"/"}>
         <Logo src={"logo.svg"}/>
-        <FormattedMessage {...globalMessages["firstName"]}/>
-        {' '}
-        <FormattedMessage {...globalMessages["surname"]}/>
+        <FormattedMessage {...globalMessages["firstName"]} />{" "}
+        <FormattedMessage {...globalMessages["surname"]} />
       </LogoLink>
     </HeaderLayout>
   );

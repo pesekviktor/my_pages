@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     line-height: 1.5;
     letter-spacing: 1px;
+    margin: 0;
   }
 
   body {
@@ -21,6 +22,8 @@ const GlobalStyle = createGlobalStyle`
   #root {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   #app {

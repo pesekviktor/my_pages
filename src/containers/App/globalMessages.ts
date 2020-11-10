@@ -10,7 +10,7 @@ export const scope = "app.global";
 /**
  * For the purpose of this task I have not been filling the language files, using just default messages
  */
-export const globalMessages =  defineMessages({
+export const globalMessages = defineMessages({
   firstName: {
     id: `${scope}.firstName`,
     defaultMessage: "Viktor",
@@ -18,5 +18,5 @@ export const globalMessages =  defineMessages({
   surname: {
     id: `${scope}.surname`,
     defaultMessage: "Pesek",
-  }
+  },
 });

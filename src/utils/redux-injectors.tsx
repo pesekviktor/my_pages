@@ -1,4 +1,7 @@
-import {useInjectReducer as useReducer, useInjectSaga as useSaga,} from "redux-injectors";
+import {
+  useInjectReducer as useReducer,
+  useInjectSaga as useSaga,
+} from "redux-injectors";
 import {InjectReducerParams, InjectSagaParams} from "../types";
 
 // export them with stricter type definitions

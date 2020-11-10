@@ -1,12 +1,18 @@
 import * as React from "react";
 import {useDispatch} from "react-redux";
 import {
+  Capabilities,
   HomeContent,
   HomeLayout,
-  PhotoHolder,
+  InfoHolder,
+  JobTitle,
   LoginFormFooter,
   LoginFormFooterSelect,
-  PageLayout, InfoHolder,
+  Name,
+  PageLayout,
+  Photo,
+  PhotoBox,
+  PhotoHolder,
 } from "./componentStyles";
 import {FormattedMessage, useIntl} from "react-intl";
 import messages from "./messages";
@@ -28,26 +34,33 @@ const LoginPage = () => {
   const onLanguageChange = (event) =>
     dispatch(changeLocale(event.target.value));
 
-
   return (
     <PageLayout>
       <Header/>
       <HomeLayout>
         <HomeContent>
           <PhotoHolder>
-            <img src={'profi_foto_transparent.png'} alt={'Viktor Pesek'}/>
+            <PhotoBox>
+              <Photo/>
+            </PhotoBox>
           </PhotoHolder>
           <InfoHolder>
-
-            <h1>
+            <JobTitle>
               <FormattedMessage {...messages["jobTitle"]} />
-            </h1>
+            </JobTitle>
+            <Name>
+              <FormattedMessage {...messages["fullName"]} />
+            </Name>
+            <Capabilities>
+              <FormattedMessage {...messages["capabilities"]} />
+            </Capabilities>
           </InfoHolder>
 
-
-          <LoginFormFooter style={{
-            display: 'none'
-          }}>
+          <LoginFormFooter
+            style={{
+              display: "none",
+            }}
+          >
             <FormControl>
               <InputLabel id="themeLabel">
                 {t.formatMessage(messages["selectTheme"])}
@@ -55,7 +68,7 @@ const LoginPage = () => {
               <LoginFormFooterSelect
                 labelId="themeLabel"
                 onChange={onThemeChange}
-                value={''}
+                value={""}
               >
                 {Object.keys(themes).map((themeKey) => (
                   <MenuItem key={themeKey} value={themeKey}>
@@ -71,7 +84,7 @@ const LoginPage = () => {
               <LoginFormFooterSelect
                 labelId={"languageLabel"}
                 onChange={onLanguageChange}
-                value={''}
+                value={""}
               >
                 {appLocales.map((language) => (
                   <MenuItem key={language} value={language}>

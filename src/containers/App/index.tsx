@@ -19,8 +19,9 @@ import styled from "styled-components";
 import {Helmet} from "react-helmet-async";
 
 const AppWrapper = styled.div`
-  width: 100%;
-  height: 100%;
+  display: flex;
+  flex: 1;
+  padding: 15px 15px;
   ${(props) => props.theme.global}
 `;
 

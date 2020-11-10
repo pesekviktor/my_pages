@@ -1,5 +1,7 @@
 {
   "app.containers.HomePage.jobTitle": "Software architect",
+  "app.containers.HomePage.fullName": "Viktor Pesek",
+  "app.containers.HomePage.capabilities": "Proven record of on-time delivery of\u00a0complex applications. Deep knowledge of development processes and Scrum. Always eager to learn and seeking new challenges.",
   "app.containers.HomePage.selectTheme": "Select theme",
   "app.containers.HomePage.light": "Light",
   "app.containers.HomePage.dark": "Dark",

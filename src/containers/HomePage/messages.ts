@@ -15,17 +15,11 @@ export default defineMessages({
     id: `${scope}.jobTitle`,
     defaultMessage: "",
   },
-  username: {
-    id: `${scope}.username`,
-    defaultMessage: "",
+  fullName: {
+    id: `${scope}.fullName`,
   },
-  password: {
-    id: `${scope}.password`,
-    defaultMessage: "",
-  },
-  forgotPassword: {
-    id: `${scope}.forgotPassword`,
-    defaultMessage: "",
+  capabilities: {
+    id: `${scope}.capabilities`,
   },
   createAccount: {
     id: `${scope}.createAccount`,

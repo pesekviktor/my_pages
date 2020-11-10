@@ -21,15 +21,15 @@ export default function configureStore(
   // 1. sagaMiddleware: Makes redux-sagas work
   const middlewares = [sagaMiddleware];
 
-    // @ts-ignore
+  // @ts-ignore
   const enhancers = [
-      applyMiddleware(...middlewares),
-      createInjectorsEnhancer({
-        // @ts-ignore
-        createReducer,
-        runSaga,
-      }),
-    ];
+    applyMiddleware(...middlewares),
+    createInjectorsEnhancer({
+      // @ts-ignore
+      createReducer,
+      runSaga,
+    }),
+  ];
 
   let enhancer = compose(...enhancers) as StoreEnhancer;
   // If Redux Dev Tools and Saga Dev Tools Extensions are installed, enable them
