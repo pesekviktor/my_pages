@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from "react";
 import {Link} from "react-router-dom";
 import {FormattedMessage} from "react-intl";
-import {globalMessages} from "../../containers/App/globalMessages";
+import {globalMessages} from "../App/globalMessages";
 
 const HeaderLayout = styled.div`
   height: 52px;
