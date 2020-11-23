@@ -21,7 +21,6 @@ import { Helmet } from "react-helmet-async";
 const AppWrapper = styled.div`
   display: flex;
   flex: 1;
-  padding: 15px 15px;
   ${(props) => props.theme.global}
 `;
 

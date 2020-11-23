@@ -1,15 +1,7 @@
-/*
- * HomePage Messages
- *
- * This contains all the text for the HomePage container.
- */
 import { defineMessages } from "react-intl";
 
 export const scope = "app.global";
 
-/**
- * For the purpose of this task I have not been filling the language files, using just default messages
- */
 export const globalMessages = defineMessages({
   firstName: {
     id: `${scope}.firstName`,
@@ -18,5 +10,13 @@ export const globalMessages = defineMessages({
   surname: {
     id: `${scope}.surname`,
     defaultMessage: "Pesek",
+  },
+  email: {
+    id: `${scope}.email`,
+    defaultMessage: "Email",
+  },
+  actualEmail: {
+    id: `${scope}.actualEmail`,
+    defaultMessage: "pesekviktor@gmail.com",
   },
 });

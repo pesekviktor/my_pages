@@ -23,6 +23,7 @@ import { changeTheme } from "../ThemesProvider/actions";
 import { changeLocale } from "../LanguageProvider/actions";
 import { Header } from "../Header/Header";
 import { ProfileLinks } from "../../components/ProfileLinks/ProfileLinks";
+import { Footer } from "../../components/Footer/Footer";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -98,6 +99,7 @@ const LoginPage = () => {
           </LoginFormFooter>
         </HomeContent>
       </HomeLayout>
+      <Footer />
     </PageLayout>
   );
 };

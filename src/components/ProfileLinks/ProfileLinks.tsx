@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import React from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import messages from "./messages";
 import { Button, LinkProps } from "@material-ui/core";
 import { SCREEN } from "../../containers/ThemesProvider/themes";
+import { globalMessages } from "../../containers/App/globalMessages";
 
 const ProfileLinksStyle = styled.div`
   ${({ theme }) => theme.spacedFlexbox(5)}
@@ -45,6 +46,9 @@ const LinkButton = ({
 };
 
 export const ProfileLinks = () => {
+  const intl = useIntl();
+  const actualEmail = intl.formatMessage(globalMessages.actualEmail);
+
   return (
     <ProfileLinksStyle>
       <LinkButton
@@ -53,8 +57,16 @@ export const ProfileLinks = () => {
           target: "_blank",
         }}
       >
-        <img src={"icons/CV.svg"} alt={"resume"} />
+        <img src={"icons/CV.svg"} alt={"cv"} />
         <FormattedMessage {...messages.viewCV} />
+      </LinkButton>
+      <LinkButton
+        linkProps={{
+          href: `mailto:${actualEmail}`,
+        }}
+      >
+        <img src={"icons/email.svg"} alt={"email"} />
+        <FormattedMessage {...globalMessages.email} />
       </LinkButton>
       <LinkButton
         linkProps={{
