@@ -2,20 +2,20 @@
  * Create the store with dynamic reducers
  */
 
-import {applyMiddleware, compose, createStore, StoreEnhancer} from "redux";
-import {createInjectorsEnhancer} from "redux-injectors";
+import { applyMiddleware, compose, createStore, StoreEnhancer } from "redux";
+import { createInjectorsEnhancer } from "redux-injectors";
 import createSagaMiddleware from "redux-saga";
-import {composeWithDevTools} from "redux-devtools-extension";
+import { composeWithDevTools } from "redux-devtools-extension";
 
 import createReducer from "./reducers";
-import {ApplicationRootState, InjectedStore} from "./types";
+import { ApplicationRootState, InjectedStore } from "./types";
 
 export default function configureStore(
   initialState: ApplicationRootState | {} = {}
 ) {
   const reduxSagaMonitorOptions = {};
   const sagaMiddleware = createSagaMiddleware(reduxSagaMonitorOptions);
-  const {run: runSaga} = sagaMiddleware;
+  const { run: runSaga } = sagaMiddleware;
 
   // Create the store with two middlewares
   // 1. sagaMiddleware: Makes redux-sagas work

@@ -4,8 +4,8 @@
  *
  */
 import ActionTypes from "./constants";
-import {DEFAULT_LOCALE} from "../../locales";
-import {LanguageProviderActions, LanguageProviderState} from "./types";
+import { DEFAULT_LOCALE } from "../../locales";
+import { LanguageProviderActions, LanguageProviderState } from "./types";
 
 export const initialState: LanguageProviderState = {
   locale: DEFAULT_LOCALE,

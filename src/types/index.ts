@@ -1,8 +1,8 @@
-import {Reducer, Store} from "redux";
-import {Saga} from "redux-saga";
-import {SagaInjectionModes} from "redux-injectors";
-import {LanguageProviderState} from "../containers/LanguageProvider/types";
-import {ThemeProviderState} from "../containers/ThemesProvider/types";
+import { Reducer, Store } from "redux";
+import { Saga } from "redux-saga";
+import { SagaInjectionModes } from "redux-injectors";
+import { LanguageProviderState } from "../containers/LanguageProvider/types";
+import { ThemeProviderState } from "../containers/ThemesProvider/types";
 
 export interface InjectedStore extends Store {
   injectedReducers: any;

@@ -1,10 +1,14 @@
 import styled from "styled-components";
 import React from "react";
-import {Link} from "react-router-dom";
-import {FormattedMessage} from "react-intl";
-import {globalMessages} from "../App/globalMessages";
+import { Link } from "react-router-dom";
+import { FormattedMessage } from "react-intl";
+import { globalMessages } from "../App/globalMessages";
+import { SCREEN } from "../ThemesProvider/themes";
 
 const HeaderLayout = styled.div`
+  ${SCREEN.maxMedium} {
+    display: none;
+  }
   height: 52px;
   width: 100%;
   display: flex;
@@ -13,6 +17,7 @@ const HeaderLayout = styled.div`
 
 const Logo = styled.img`
   max-height: 100%;
+  width: 50px;
   margin-right: 15px;
 `;
 
@@ -29,7 +34,7 @@ export const Header = () => {
   return (
     <HeaderLayout>
       <LogoLink to={"/"}>
-        <Logo src={"logo.svg"}/>
+        <Logo src={"logo.svg"} />
         <FormattedMessage {...globalMessages["firstName"]} />{" "}
         <FormattedMessage {...globalMessages["surname"]} />
       </LogoLink>

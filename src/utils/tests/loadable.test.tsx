@@ -1,5 +1,5 @@
 import React from "react";
-import {render} from "@testing-library/react";
+import { render } from "@testing-library/react";
 import loadable from "../loadable";
 
 const LoadingIndicator = () => <div>Loading</div>;
@@ -12,35 +12,35 @@ const LazyComponentWithEmptyOptions = loadable(
 );
 
 const LazyComponentWithFallback = loadable(() => import("./loadable.index"), {
-  fallback: <LoadingIndicator/>,
+  fallback: <LoadingIndicator />,
 });
 
 describe("loadable", () => {
   it("should render null by default", () => {
     const {
-      container: {firstChild},
-    } = render(<LazyComponent/>);
+      container: { firstChild },
+    } = render(<LazyComponent />);
     expect(firstChild).toMatchSnapshot();
   });
 
   it("should render null by default with empty options", () => {
     const {
-      container: {firstChild},
-    } = render(<LazyComponentWithEmptyOptions/>);
+      container: { firstChild },
+    } = render(<LazyComponentWithEmptyOptions />);
     expect(firstChild).toMatchSnapshot();
   });
 
   it("should render fallback if given one", () => {
     const {
-      container: {firstChild},
-    } = render(<LazyComponentWithFallback/>);
+      container: { firstChild },
+    } = render(<LazyComponentWithFallback />);
     expect(firstChild).toMatchSnapshot();
   });
 
   it("should render LazyComponent after waiting for it to load", async () => {
     const {
-      container: {firstChild},
-    } = render(<LazyComponent/>);
+      container: { firstChild },
+    } = render(<LazyComponent />);
     await LazyComponent;
     expect(firstChild).toMatchSnapshot();
   });

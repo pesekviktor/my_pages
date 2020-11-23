@@ -2,12 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./containers/App";
 import reportWebVitals from "./reportWebVitals";
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 import configureStore from "./configureStore";
-import {HelmetProvider} from "react-helmet-async";
-import {BrowserRouter} from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { BrowserRouter } from "react-router-dom";
 import LanguageProvider from "./containers/LanguageProvider";
-import {ThemesProvider} from "./containers/ThemesProvider/themesProvider";
+import { ThemesProvider } from "./containers/ThemesProvider/themesProvider";
 
 const enTranslationMessages = require("./localizations/en.json");
 const csTranslationMessages = require("./localizations/cs.json");
@@ -27,7 +27,7 @@ ReactDOM.render(
         <ThemesProvider>
           <HelmetProvider>
             <BrowserRouter>
-              <App/>
+              <App />
             </BrowserRouter>
           </HelmetProvider>
         </ThemesProvider>

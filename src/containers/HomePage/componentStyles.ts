@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {Select, TextField} from "@material-ui/core";
+import { Select, TextField } from "@material-ui/core";
+import { SCREEN } from "../ThemesProvider/themes";
 
 export const HomeLayout = styled.div`
   width: 100%;
@@ -18,6 +19,10 @@ export const PageLayout = styled.div`
 `;
 
 export const HomeContent = styled.div`
+  ${SCREEN.maxMedium} {
+    justify-content: center;
+    max-height: unset;
+  }
   min-width: 300px;
   max-width: 1000px;
   max-height: 500px;
@@ -33,12 +38,13 @@ export const PhotoHolder = styled.div`
   justify-content: center;
   flex: 1;
 `;
+
 export const PhotoBox = styled.div`
   border-radius: 100%;
   width: 300px;
   height: 300px;
   overflow: hidden;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: ${({ theme }) => theme.shadow(4)};
 `;
 
 export const JobTitle = styled.h2`
@@ -53,6 +59,12 @@ export const Name = styled.h1`
 `;
 
 export const InfoHolder = styled.div`
+  ${SCREEN.maxMedium} {
+    max-width: unset;
+    padding: 35px 20px 0;
+    justify-content: center;
+    text-align: center;
+  }
   display: flex;
   max-width: 600px;
   flex-direction: column;
@@ -74,7 +86,9 @@ export const LoginInput = styled(TextField)`
   }
 `;
 
-export const Capabilities = styled.div``;
+export const Capabilities = styled.div`
+  white-space: pre-line;
+`;
 
 export const LoginFormFooter = styled.div`
   width: 100%;

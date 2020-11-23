@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -42,6 +42,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: inherit;
     font-size: inherit;
     border-radius: 12px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    :link{
+      color: inherit;
+    }
   }
 `;
 

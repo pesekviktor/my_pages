@@ -6,7 +6,7 @@ interface Props {
   selectedKey: string;
 }
 
-function Select({items, selectedKey, onSelectChange}: Props) {
+function Select({ items, selectedKey, onSelectChange }: Props) {
   return (
     <select
       onChange={(event) => {

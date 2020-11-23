@@ -8,15 +8,15 @@
  */
 
 import * as React from "react";
-import {Route, Switch} from "react-router-dom";
-import {hot} from "react-hot-loader/root";
+import { Route, Switch } from "react-router-dom";
+import { hot } from "react-hot-loader/root";
 
 import HomePage from "../HomePage/Loadable";
 import NotFoundPage from "../NotFoundPage/Loadable";
 
 import GlobalStyle from "../../global-styles";
 import styled from "styled-components";
-import {Helmet} from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const AppWrapper = styled.div`
   display: flex;
@@ -35,10 +35,18 @@ function App() {
         />
       </Helmet>
       <Switch>
-        <Route exact path="/" component={HomePage}/>
-        <Route component={NotFoundPage}/>
+        <Route exact path="/" component={HomePage} />
+        <Route
+          path="/linkedin"
+          component={() => {
+            window.location.href = "https://www.linkedin.com/in/pesekviktor";
+            return null;
+          }}
+        />
+
+        <Route component={NotFoundPage} />
       </Switch>
-      <GlobalStyle/>
+      <GlobalStyle />
     </AppWrapper>
   );
 }

@@ -1,5 +1,5 @@
 import * as React from "react";
-import {useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import {
   Capabilities,
   HomeContent,
@@ -14,14 +14,15 @@ import {
   PhotoBox,
   PhotoHolder,
 } from "./componentStyles";
-import {FormattedMessage, useIntl} from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import messages from "./messages";
-import {FormControl, InputLabel, MenuItem} from "@material-ui/core";
-import {themes} from "../ThemesProvider/themes";
-import {appLocales} from "../../locales";
-import {changeTheme} from "../ThemesProvider/actions";
-import {changeLocale} from "../LanguageProvider/actions";
-import {Header} from "../Header/Header";
+import { FormControl, InputLabel, MenuItem } from "@material-ui/core";
+import { themes } from "../ThemesProvider/themes";
+import { appLocales } from "../../locales";
+import { changeTheme } from "../ThemesProvider/actions";
+import { changeLocale } from "../LanguageProvider/actions";
+import { Header } from "../Header/Header";
+import { ProfileLinks } from "../../components/ProfileLinks/ProfileLinks";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -36,12 +37,12 @@ const LoginPage = () => {
 
   return (
     <PageLayout>
-      <Header/>
+      <Header />
       <HomeLayout>
         <HomeContent>
           <PhotoHolder>
             <PhotoBox>
-              <Photo/>
+              <Photo />
             </PhotoBox>
           </PhotoHolder>
           <InfoHolder>
@@ -53,6 +54,7 @@ const LoginPage = () => {
             </Name>
             <Capabilities>
               <FormattedMessage {...messages["capabilities"]} />
+              <ProfileLinks />
             </Capabilities>
           </InfoHolder>
 

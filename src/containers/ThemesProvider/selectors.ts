@@ -1,6 +1,6 @@
-import {createSelector} from "reselect";
-import {ApplicationRootState} from "../../types";
-import {initialState} from "./reducer";
+import { createSelector } from "reselect";
+import { ApplicationRootState } from "../../types";
+import { initialState } from "./reducer";
 
 const selectTheme = (state: ApplicationRootState) =>
   state.theme || initialState;
@@ -12,4 +12,4 @@ const selectTheme = (state: ApplicationRootState) =>
 const makeSelectTheme = () =>
   createSelector(selectTheme, (themeState) => themeState.theme);
 
-export {selectTheme, makeSelectTheme};
+export { selectTheme, makeSelectTheme };

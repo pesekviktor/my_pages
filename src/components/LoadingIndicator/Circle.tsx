@@ -1,5 +1,5 @@
 import * as React from "react";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const circleFadeDelay = keyframes`
   0%,
@@ -41,13 +41,13 @@ const Circle = (props: Props) => {
       border-radius: 100%;
       animation: ${circleFadeDelay} 1.2s infinite ease-in-out both;
       ${props.delay &&
-  `
+      `
         -webkit-animation-delay: ${props.delay}s;
         animation-delay: ${props.delay}s;
       `};
     }
   `;
-  return <CirclePrimitive/>;
+  return <CirclePrimitive />;
 };
 
 export default Circle;

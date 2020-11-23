@@ -4,8 +4,8 @@
  *
  */
 import ActionTypes from "./constants";
-import {ThemeProviderActions, ThemeProviderState} from "./types";
-import {DEFAULT_THEME} from "./themes";
+import { ThemeProviderActions, ThemeProviderState } from "./types";
+import { DEFAULT_THEME } from "./themes";
 
 export const initialState: ThemeProviderState = {
   theme: DEFAULT_THEME,
