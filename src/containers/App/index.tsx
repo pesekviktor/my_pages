@@ -35,14 +35,6 @@ function App() {
       </Helmet>
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route
-          path="/linkedin"
-          component={() => {
-            window.location.href = "https://www.linkedin.com/in/pesekviktor";
-            return null;
-          }}
-        />
-
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

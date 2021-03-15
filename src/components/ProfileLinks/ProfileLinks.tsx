@@ -70,7 +70,7 @@ export const ProfileLinks = () => {
       </LinkButton>
       <LinkButton
         linkProps={{
-          href: "linkedin",
+          href: "https://www.linkedin.com/in/pesekviktor",
           target: "_blank",
         }}
       >
